@@ -1,12 +1,22 @@
 package Training_java_Spring.boot.client.dto.request;
 
 public class ClientRequest {
+
+    private String id;
     private String name;
     private String email;
     private String address;
     private String gender;
 
     public ClientRequest() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -44,7 +54,8 @@ public class ClientRequest {
     @Override
     public String toString() {
         return "ClientRequest{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", gender='" + gender + '\'' +
