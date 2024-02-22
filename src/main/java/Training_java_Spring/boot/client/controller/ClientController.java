@@ -34,4 +34,13 @@ public class ClientController {
         log.info(" === Finish api getById client, Client Id : {}  ", response.getId());
         return response;
     }
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public  ClientResponse update(@RequestBody ClientRequest request, @PathVariable("id") String id ){
+        log.info(" === Start api update client === ");
+        log.info(" === Request Body : {}, String id : {} === ", request, id);
+        ClientResponse response = service.update(request, id);
+        log.info( " === Finish api update client, Client Id : {} === ", response.getId());
+        return response;
+    }
 }
