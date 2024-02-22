@@ -6,4 +6,5 @@ import Training_java_Spring.boot.client.dto.response.ClientResponse;
 public interface ClientService {
 
     ClientResponse create(ClientRequest request);
+    ClientResponse getById(String id);
 }
